@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const { user, pass , database} = require('../../config/mongo.json')
+const { user, pass, database } = require('../../config/mongo.json')
 
 mongoose.connect(`mongodb+srv://${user}:${pass}@tindevcluster-gxzea.mongodb.net/${database}?retryWrites=true&w=majority`,
   {

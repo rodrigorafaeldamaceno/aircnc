@@ -12,6 +12,11 @@ const upload = multer(uploadConfig)
 
 const routes = express.Router()
 
+// req.query = acessar query params (para filtos)
+// req.params = acessar route params (para edição, delete)
+// req.body = acessar corpo da requisição
+// req.headers = acessar header da requisição
+
 routes.post('/sessions', sessionController.store)
 
 routes.post('/spots', upload.single('thumbmail'), spotController.store)

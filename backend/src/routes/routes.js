@@ -19,7 +19,7 @@ const routes = express.Router()
 
 routes.post('/sessions', sessionController.store)
 
-routes.post('/spots', upload.single('thumbmail'), spotController.store)
+routes.post('/spots', upload.single('thumbnail'), spotController.store)
 routes.get('/spots', spotController.index)
 
 routes.get('/dashboard', dashController.show)

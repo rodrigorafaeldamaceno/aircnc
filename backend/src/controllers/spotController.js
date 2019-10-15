@@ -6,7 +6,7 @@ module.exports = {
   async index(req, res) {
     const { tech } = req.query
     const spots = await Spot.find({ techs: tech })
-    
+
     return res.json(spots)
   },
   async store(req, res) {
@@ -27,7 +27,7 @@ module.exports = {
     }
 
     const spot = await Spot.create({
-      thumbnail: filename,
+      thumbnail: filename.replace(/\s/g, ''),
       company,
       price,
       techs: techs.split(',').map(tech => tech.trim()),

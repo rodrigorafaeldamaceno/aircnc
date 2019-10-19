@@ -1,10 +1,18 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Text } from 'react-native';
+
+import SafeAreaView from '../../components/SafeAreaView'
 
 // import { Container } from './styles';
 
-export default function Book() {
+export default function Book({ navigation }) {
+  const id = navigation.getParam('id')
+
   return (
-    <View />
+    <SafeAreaView>
+      <Text>{id}</Text>
+    </SafeAreaView>
   )
+
+
 }
